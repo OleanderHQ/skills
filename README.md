@@ -83,6 +83,8 @@ claude mcp list
 
 - `skills/spark-best-practices`
 - `skills/oleander-spark-lineage`
+- `skills/oleander-iceberg-catalog`
+- `skills/oleander-spark-submit`
 
 ## Contributing
 
