@@ -2,7 +2,7 @@
 
 Forkable skills repository for teams using [oleander.dev](https://oleander.dev/).
 
-Use this repo to store reusable skills and connect Cursor or Claude Code or other IDE to the oleander MCP server. 
+Use this repo to store reusable skills, connect to the MCP, and install the oleander CLI to get the most capabile local experience for oleander.
 
 ## Quick start
 
@@ -18,6 +18,23 @@ You can install skills from the published repository on [skills.sh](https://skil
 ```bash
 npx skills add oleanderHQ/skills
 ```
+
+## Install the oleander CLI
+
+Install with Homebrew:
+
+```bash
+brew tap OleanderHQ/tap
+brew install oleander-cli
+```
+
+Configure with your API key:
+
+```bash
+oleander configure --api-key <YOUR_API_KEY>
+```
+
+You can find your API key in [oleander settings](https://oleander.dev/app/settings/api-key).
 
 ## MCP
 
