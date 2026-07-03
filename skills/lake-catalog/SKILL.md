@@ -47,7 +47,7 @@ This skill defines the shared catalog rules. Engine-specific syntax and operatio
 
 Use companion skills when available:
 
-- Spark: see `spark-iceberg-catalog` for `spark.table(...)`, write modes, and caching guidance
+- Spark: see `spark-lake-catalog` for `spark.table(...)`, write modes, and caching guidance
 - Other engines: keep the same table naming and catalog-reference rules, but use that engine's native API
 
 ## Namespace conventions
