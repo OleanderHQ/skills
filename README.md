@@ -14,4 +14,4 @@ npx skills add oleanderhq/skills
 
 | Skill | Useful for |
 | --- | --- |
-| [query](skills/query/SKILL.md) | Explore your data, compare seasonal revenue, analyze product changes, count new user signups, and answer questions hidden in your data. |
+| [`query`](skills/query/SKILL.md) | Explore your data, compare seasonal revenue, analyze product changes, count new user signups, and answer questions hidden in your data. |
