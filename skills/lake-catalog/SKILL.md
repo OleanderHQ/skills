@@ -1,11 +1,11 @@
 ---
-name: iceberg-catalog
-description: Engine-agnostic guidance for working with oleander Iceberg catalog tables, including naming conventions, catalog hierarchy, and table reference patterns.
+name: lake-catalog
+description: Engine-agnostic guidance for working with the oleander lake catalog, including naming conventions, catalog hierarchy, and table reference patterns.
 ---
 
-# oleander Iceberg Catalog
+# oleander Lake Catalog
 
-Use this skill when reading from or writing to the oleander Iceberg catalog from Spark, Polars, SQL, or another engine.
+Use this skill when reading from or writing to the oleander lake catalog from Spark, Polars, SQL, or another engine.
 
 ## Catalog hierarchy
 

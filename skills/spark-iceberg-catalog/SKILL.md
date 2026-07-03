@@ -7,7 +7,7 @@ description: Spark-specific patterns for reading and writing oleander Iceberg ca
 
 Use this skill when reading from or writing to the oleander Iceberg catalog in a Spark job.
 
-For shared catalog conventions such as table naming, namespaces, and avoiding raw storage paths, also use `iceberg-catalog`.
+For shared catalog conventions such as table naming, namespaces, and avoiding raw storage paths, also use `lake-catalog`.
 
 ## Reading tables
 
