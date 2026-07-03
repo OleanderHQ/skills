@@ -1,100 +1,17 @@
-# Skills for oleander
+# [`oleander`](https://oleander.dev/) Skills
 
-Forkable skills repository for teams using [oleander.dev](https://oleander.dev/).
-
-Use this repo to store reusable skills, connect to the MCP, and install the oleander CLI to get the most capabile local experience for oleander.
-
-## Quick start
-
-```bash
-git clone https://github.com/oleanderHQ/skills.git
-cd oleander-spark
-```
+A collection of [agent skills](https://agentskills.io/home) for building with [oleander](https://oleander.dev/).
 
 ## Install via skills
 
-You can install skills from the published repository on [skills.sh](https://skills.sh/) using:
+Install from [skills.sh](https://skills.sh/) with:
 
 ```bash
-npx skills add oleanderHQ/skills
+npx skills add oleanderhq/skills
 ```
 
-## Install the oleander CLI
+## Skills
 
-Install with Homebrew:
-
-```bash
-brew tap OleanderHQ/tap
-brew install oleander-cli
-```
-
-Configure with your API key:
-
-```bash
-oleander configure --api-key <YOUR_API_KEY>
-```
-
-You can find your API key in [oleander settings](https://oleander.dev/app/settings/api-key).
-
-## MCP
-
-### Cursor
-
-```bash
-agent mcp add oleander -- npx -y mcp-remote https://oleander.dev/api/mcp
-```
-
-Verify:
-
-```bash
-agent mcp list
-```
-
-Alternative config in `.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "oleander": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://oleander.dev/api/mcp"
-      ]
-    }
-  }
-}
-```
-
-### Claude Code
-
-```bash
-claude mcp add oleander -- npx -y mcp-remote https://oleander.dev/api/mcp
-```
-
-Verify:
-
-```bash
-claude mcp list
-```
-
-## Included Skills
-
-- `skills/spark-best-practices`
-- `skills/oleander-spark-lineage`
-- `skills/oleander-iceberg-catalog`
-- `skills/oleander-spark-submit`
-
-## Contributing
-
-External contributors are welcome.
-
-- Open a PR with clear context
-- A contribution is considered approved and official only after review, approval, and merge by an oleander employee.
-
-See `CONTRIBUTING.md` for details.
-
-## License
-
-MIT. See `LICENSE`.
+| Skill | Useful for |
+| --- | --- |
+| [query](skills/query/SKILL.md) | Explore your data, compare seasonal revenue, analyze product changes, count new user signups, and answer questions hidden in your data. |
