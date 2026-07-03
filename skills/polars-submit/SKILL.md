@@ -62,8 +62,6 @@ Avoid:
 - calling `.remote()` yourself
 - handling credentials in the script
 
-oleander handles execution locally in Daytona or remotely in Polars Cloud.
-
 ## Table identifiers
 
 For oleander Polars examples, pass table identifiers as `namespace.table` strings such as `default.sf_311` or `analytics.daily_metrics`.
@@ -105,5 +103,3 @@ Distributed runs write results to the lake catalog and are better for large jobs
 
 - Prefer query mode for simple SQL-style reads, joins, and filters.
 - Prefer script mode for reusable Polars transformations.
-- Prefer local runs for small and medium workloads.
-- Use distributed mode only when local execution is too small or too slow for the job.
