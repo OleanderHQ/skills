@@ -2,22 +2,32 @@
 
 A collection of [agent skills](https://agentskills.io/home) for building with [oleander](https://oleander.dev/).
 
-## Install via skills
+[Browse on skills.sh](https://skills.sh/oleanderhq/skills)
 
-Install from [skills.sh](https://skills.sh/) with:
+## Install
 
 ```bash
-npx skills add oleanderhq/skills
+npx skills add OleanderHQ/skills -g -y
 ```
 
 ## Skills
 
-| Skill | Useful for |
+| Skill | Use when |
 | --- | --- |
-| [`lake-query`](skills/lake-query/SKILL.md) | Explore your data, compare seasonal revenue, analyze product changes, count new user signups, and answer questions hidden in your data. |
-| [`lake-catalog`](skills/lake-catalog/SKILL.md) | Engine-agnostic guidance for working with the oleander lake catalog, including naming conventions, catalog hierarchy, and table reference patterns. |
-| [`polars-submit`](skills/polars-submit/SKILL.md) | Run Polars queries or scripts on oleander, locally or distributed, and save results to the lake catalog. |
-| [`spark-lake-catalog`](skills/spark-lake-catalog/SKILL.md) | Spark-specific patterns for reading and writing oleander lake catalog tables, including append vs overwrite, avoiding driver writes, and reusable table naming. |
-| [`spark-lineage`](skills/spark-lineage/SKILL.md) | oleander-specific Spark guidance for connected OpenLineage, `collect()` pitfalls, and environment variable usage. |
-| [`spark-submit`](skills/spark-submit/SKILL.md) | Submitting, monitoring, and configuring Spark jobs on oleander using the CLI and TypeScript SDK. |
-| [`spark-best-practices`](skills/spark-best-practices/SKILL.md) | General Apache Spark best practices for scalable, maintainable, and performant DataFrame jobs. |
+| [`lake-query`](skills/lake-query/SKILL.md) | Querying lake tables, sizing partitions, or choosing DuckDB vs Spark SQL |
+| [`lake-catalog`](skills/lake-catalog/SKILL.md) | Naming tables, choosing namespaces, or referencing the lake catalog |
+| [`polars-submit`](skills/polars-submit/SKILL.md) | Running Polars via the CLI (query/script, local/distributed, `--save`) |
+| [`spark-lake-catalog`](skills/spark-lake-catalog/SKILL.md) | Reading or writing Iceberg tables from Spark jobs |
+| [`spark-lineage`](skills/spark-lineage/SKILL.md) | Fixing disconnected OpenLineage or avoiding `collect()` between read and write |
+| [`spark-submit`](skills/spark-submit/SKILL.md) | Submitting, monitoring, or automating Spark jobs (MCP, CLI, SDK) |
+| [`spark-best-practices`](skills/spark-best-practices/SKILL.md) | Optimizing or reviewing general Spark DataFrame jobs |
+
+### Former skill names
+
+These older skill IDs were renamed. Prefer the current names above:
+
+| Former | Current |
+| --- | --- |
+| `oleander-spark-lineage` | `spark-lineage` |
+| `oleander-spark-submit` | `spark-submit` |
+| `oleander-iceberg-catalog` | `lake-catalog` / `spark-lake-catalog` |
