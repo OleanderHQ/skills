@@ -1,101 +1,33 @@
-# Skills for oleander
+# [`oleander`](https://oleander.dev/) Skills
 
-Forkable skills repository for teams using [oleander.dev](https://oleander.dev/).
+A collection of [agent skills](https://agentskills.io/home) for building with [oleander](https://oleander.dev/).
 
-Use this repo to store reusable skills, connect to the MCP, and install the oleander CLI to get the most capabile local experience for oleander.
+[Browse on skills.sh](https://skills.sh/oleanderhq/skills)
 
-## Quick start
-
-```bash
-git clone https://github.com/oleanderHQ/skills.git
-cd oleander-spark
-```
-
-## Install via skills
-
-You can install skills from the published repository on [skills.sh](https://skills.sh/) using:
+## Install
 
 ```bash
-npx skills add oleanderHQ/skills
+npx skills add OleanderHQ/skills -g -y
 ```
 
-## Install the oleander CLI
+## Skills
 
-Install with Homebrew:
+| Skill | Use when |
+| --- | --- |
+| [`lake-query`](skills/lake-query/SKILL.md) | Querying lake tables, writing query results to a table, or handling engine routing and billing errors |
+| [`lake-catalog`](skills/lake-catalog/SKILL.md) | Naming tables, choosing namespaces, or referencing the lake catalog |
+| [`polars-submit`](skills/polars-submit/SKILL.md) | Running Polars via the CLI (query/script, local/distributed, `--save`) |
+| [`spark-lake-catalog`](skills/spark-lake-catalog/SKILL.md) | Reading or writing Iceberg tables from Spark jobs |
+| [`spark-lineage`](skills/spark-lineage/SKILL.md) | Fixing disconnected OpenLineage or avoiding `collect()` between read and write |
+| [`spark-submit`](skills/spark-submit/SKILL.md) | Submitting, monitoring, or automating Spark jobs (MCP, CLI, SDK) |
+| [`spark-best-practices`](skills/spark-best-practices/SKILL.md) | Optimizing or reviewing general Spark DataFrame jobs |
 
-```bash
-brew tap OleanderHQ/tap
-brew install oleander-cli
-```
+### Former skill names
 
-Configure with your API key:
+These older skill IDs were renamed. Prefer the current names above:
 
-```bash
-oleander configure --api-key <YOUR_API_KEY>
-```
-
-You can find your API key in [oleander settings](https://oleander.dev/app/settings/api-key).
-
-## MCP
-
-### Cursor
-
-```bash
-agent mcp add oleander -- npx -y mcp-remote https://oleander.dev/api/mcp
-```
-
-Verify:
-
-```bash
-agent mcp list
-```
-
-Alternative config in `.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "oleander": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://oleander.dev/api/mcp"
-      ]
-    }
-  }
-}
-```
-
-### Claude Code
-
-```bash
-claude mcp add oleander -- npx -y mcp-remote https://oleander.dev/api/mcp
-```
-
-Verify:
-
-```bash
-claude mcp list
-```
-
-## Included Skills
-
-- `skills/spark-best-practices`
-- `skills/oleander-spark-lineage`
-- `skills/oleander-iceberg-catalog`
-- `skills/oleander-spark-submit`
-- `skills/oleander-mcp-queries`
-
-## Contributing
-
-External contributors are welcome.
-
-- Open a PR with clear context
-- A contribution is considered approved and official only after review, approval, and merge by an oleander employee.
-
-See `CONTRIBUTING.md` for details.
-
-## License
-
-MIT. See `LICENSE`.
+| Former | Current |
+| --- | --- |
+| `oleander-spark-lineage` | `spark-lineage` |
+| `oleander-spark-submit` | `spark-submit` |
+| `oleander-iceberg-catalog` | `lake-catalog` / `spark-lake-catalog` |
