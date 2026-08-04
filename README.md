@@ -14,7 +14,7 @@ npx skills add OleanderHQ/skills -g -y
 
 | Skill | Use when |
 | --- | --- |
-| [`lake-query`](skills/lake-query/SKILL.md) | Querying lake tables, sizing partitions, or choosing DuckDB vs Spark SQL |
+| [`lake-query`](skills/lake-query/SKILL.md) | Querying lake tables, writing query results to a table, or handling engine routing and billing errors |
 | [`lake-catalog`](skills/lake-catalog/SKILL.md) | Naming tables, choosing namespaces, or referencing the lake catalog |
 | [`polars-submit`](skills/polars-submit/SKILL.md) | Running Polars via the CLI (query/script, local/distributed, `--save`) |
 | [`spark-lake-catalog`](skills/spark-lake-catalog/SKILL.md) | Reading or writing Iceberg tables from Spark jobs |
