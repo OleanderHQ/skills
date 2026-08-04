@@ -7,6 +7,8 @@ description: How to submit, monitor, and configure Spark jobs on oleander using 
 
 Use this skill when submitting Spark jobs to oleander, monitoring run state, or building automated workflows that execute Spark jobs.
 
+Submitting SQL through MCP rather than the CLI or SDK? Use `query_submit`, which routes the query and sizes compute automatically — see `skills/oleander-mcp-queries`. The `spark_sql_submit` MCP tool is for runs that need a durable job name or explicit machine types.
+
 ## CLI submission
 
 Upload a script and submit it from the terminal:

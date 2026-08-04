@@ -17,6 +17,8 @@ Tables are addressed as `catalog.namespace.table`:
 
 By default, `default` and `telemetry` namespaces are available out of the box. The `telemetry` namespace contains oleander-managed data you can query directly (for example `oleander.telemetry.run_events`, `oleander.telemetry.traces`, and `oleander.telemetry.logs`).
 
+These tables are also reachable over MCP with `query_run` — see `skills/oleander-mcp-queries`.
+
 Examples:
 
 ```bash
