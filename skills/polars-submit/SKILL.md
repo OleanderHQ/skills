@@ -24,7 +24,7 @@ In query mode, pass each source table with `--table`. Use `alias=namespace.table
 
 Query mode runs **Polars SQL**, not DuckDB or Spark. Do not emit helpers those engines share:
 
-- No `date_diff`, `datediff`, `timestampdiff`, `epoch_ms`, or `json_extract*`
+- No `date_diff`, `datediff`, or `timestampdiff`
 - For a timestamp span, write `max(ts) - min(ts)` (a duration)
 - Aggregate function calls cannot be nested: never `AVG(max(ts) - min(ts))`. Group the duration in an inner `SELECT`, then aggregate outside:
 
