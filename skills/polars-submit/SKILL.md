@@ -24,6 +24,25 @@ oleander polars "select * from events limit 10" \
 
 In query mode, pass each source table with `--table`. Use `alias=namespace.table` when the SQL should refer to a short name like `events`.
 
+### Polars SQL dialect
+
+Query mode runs **Polars SQL**, not DuckDB or Spark. Do not emit helpers those engines share:
+
+- No `date_diff`, `datediff`, or `timestampdiff`
+- For a timestamp span, write `max(ts) - min(ts)` (a duration)
+- Aggregate function calls cannot be nested: never `AVG(max(ts) - min(ts))`. Group the duration in an inner `SELECT`, then aggregate outside:
+
+```sql
+SELECT AVG(runtime) AS avg_runtime
+FROM (
+  SELECT run_id, max(event_time) - min(event_time) AS runtime
+  FROM events
+  GROUP BY run_id
+) t
+```
+
+If the work needs DuckDB-only functions, use `lake-query` with `engine: "duckdb"` instead of Polars query mode.
+
 ## CLI script mode
 
 Use script mode for idiomatic Polars logic:
@@ -105,5 +124,5 @@ Distributed runs write results to the lake catalog and are better for large jobs
 
 ## Quick guidance
 
-- Prefer query mode for simple SQL-style reads, joins, and filters.
-- Prefer script mode for reusable Polars transformations.
+- Prefer query mode for simple SQL-style reads, joins, and filters — written as Polars SQL (see dialect notes above).
+- Prefer script mode for reusable Polars DataFrame transformations.
