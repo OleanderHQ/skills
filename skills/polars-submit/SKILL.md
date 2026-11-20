@@ -26,7 +26,7 @@ Query mode runs **Polars SQL**, not DuckDB or Spark. Do not emit helpers those e
 
 - No `date_diff`, `datediff`, `timestampdiff`, `epoch_ms`, or `json_extract*`
 - For a timestamp span, write `max(ts) - min(ts)` (a duration)
-- No nested aggregates: never `AVG(max(ts) - min(ts))`. Group the duration in an inner `SELECT`, then aggregate outside:
+- Aggregate function calls cannot be nested: never `AVG(max(ts) - min(ts))`. Group the duration in an inner `SELECT`, then aggregate outside:
 
 ```sql
 SELECT AVG(runtime) AS avg_runtime
