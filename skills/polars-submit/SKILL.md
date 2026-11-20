@@ -121,4 +121,4 @@ Distributed runs write results to the lake catalog and are better for large jobs
 ## Quick guidance
 
 - Prefer query mode for simple SQL-style reads, joins, and filters — written as Polars SQL (see dialect notes above).
-- Prefer script mode for reusable Polars transformations, or when duration math / nested rollups are awkward in Polars SQL.
+- Prefer script mode for reusable Polars DataFrame transformations.
